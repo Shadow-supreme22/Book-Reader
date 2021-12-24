@@ -4,7 +4,7 @@ import '../model/login_model.dart';
 
 class APIService {
   Future<LoginResponseModel> login(LoginRequestModel requestModel) async {
-    String url = "https://shadowvj.pythonanywhere.com/login/";
+    String url = "API";
 
     final response = await http.post(url, body: requestModel.toJson());
     if (response.statusCode == 200 || response.statusCode == 400) {
