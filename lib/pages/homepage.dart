@@ -12,7 +12,7 @@ class homePage extends StatefulWidget {
 class _homePageState extends State<homePage> {
   Future getUserData() async {
     var response = await http
-        .get(Uri.http('shadowvj.pythonanywhere.com', 'api/resourceDatas/'));
+        .get(Uri.http('API', 'API'));
     var jsonData = jsonDecode(response.body);
     List<Book> books = [];
     for (var u in jsonData) {
